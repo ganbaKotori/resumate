@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.App {
+  background-color: #282c34;
+}
+
+.linkedin {
+  height: 20%;
+  width: 20%;
+  margin-left: 23%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indeed {
+  height: 40%;
+  width: 40%;
+  margin-left: 6%;
+  padding-bottom: 1%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo{
+  height: 30%;
+  width: 30%
+}
+
+.logo-nav{
+  padding-top: 1%;
+  height: 100px;
+  width: 70px
+}

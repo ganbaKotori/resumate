@@ -18,5 +18,6 @@ def compare_skills(soup, skills) :
 
     if len(matched_skills) == 0 :
         print('You do not meet the qualifications for this job')
+        return []
     else :
         return matched_skills
