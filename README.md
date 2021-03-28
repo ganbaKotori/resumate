@@ -25,3 +25,14 @@ Now you can do a POST request to http://localhost:5000/generate-resume
 You can use Postman to do that request
 
 There's an example of doing a POST request on Discord
+
+# how to start backend
+
+```
+cd frontend
+
+npm install
+
+npm start
+```
+Navigate to http://localhost:3000/landing
