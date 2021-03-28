@@ -24,9 +24,3 @@ def compare_skills(soup, skills) :
         print('These skills match the jobs qualifications: ')
         for skill in matched_skills :
             print('- ' + skill)
-
-test = retrieve_job_qualifications(url)
-
-skills = ['java', 'databases', 'c++', 'c#', 'visual studio', 'zynq', 'linux', 'aws', 'angular', 'html', 'javascript']
-
-compare_skills(test, skills)
