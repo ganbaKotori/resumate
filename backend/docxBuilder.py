@@ -112,6 +112,6 @@ def buildResume(userInformation):
 
     document.add_page_break()
 
-    document.save('resume.docx')
+    document.save('./resumes/resume.docx')
 
-buildResume(userInformation)
+#buildResume(userInformation)

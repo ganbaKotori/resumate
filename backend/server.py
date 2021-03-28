@@ -6,6 +6,8 @@ from flask_cors import CORS
 
 from docx2pdf import convert
 
+from docxBuilder import buildResume
+
 app = Flask(__name__)
 CORS(app)
 
@@ -38,13 +40,24 @@ def generateResume():
     print(skills)
     print("end of user input")
 
-
     #skills requirement by the job
     jobQualifications = retrieve_job_qualifications(url) 
     #skills that match up the requirememnts
-    qualifiedSkill = compare_skills(jobQualifications, skills)
+    qualifiedSkills = compare_skills(jobQualifications, skills)
 
-    print(qualifiedSkill)
+    print(qualifiedSkills)
+
+    userInformation = {
+        "education": education,
+        "email": email,
+        "experience": experience,
+        "firstName": firstName,
+        "lastName": lastName,
+        "phoneNumber": phoneNumber,
+        "skills": qualifiedSkills
+    }
+
+    buildResume(userInformation)
 
     convert("./resumes/resume.docx", "./resumes/resume.pdf")
 
