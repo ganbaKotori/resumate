@@ -1,7 +1,10 @@
 from uploadResume import uploadResume
+from skill_matcher import retrieve_job_qualifications, compare_skills
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+
+from docx2pdf import convert
 
 app = Flask(__name__)
 CORS(app)
@@ -33,6 +36,17 @@ def generateResume():
     print(education)
     print(experience)
     print(skills)
+    print("end of user input")
+
+
+    #skills requirement by the job
+    jobQualifications = retrieve_job_qualifications(url) 
+    #skills that match up the requirememnts
+    qualifiedSkill = compare_skills(jobQualifications, skills)
+
+    print(qualifiedSkill)
+
+    convert("./resumes/resume.docx", "./resumes/resume.pdf")
 
     docxDownloadLink , pdfDownloadLink = uploadResume('./resumes/','resume.docx','resume.pdf')
     #return docxDownloadLink, pdfDownloadLink
