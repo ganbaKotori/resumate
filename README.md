@@ -12,6 +12,8 @@ cd backend
 pip install flask 
 pip install -U flask-cors 
 pip install boto3
+pip install bs4
+pip install requests
 
 export FLASK_APP=server.py
 export FLASK_ENV=development
