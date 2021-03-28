@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-url = 'https://www.linkedin.com/jobs/view/2442922626/?eBP=NotAvailableFromMidTier&recommendedFlavor=ACTIVELY_HIRING_COMPANY&refId=6uFwmmDAwclD46luXJB1Uw%3D%3D&trackingId=uz6y3Dr%2FHJAatiKQEUQYuA%3D%3D&trk=flagship3_search_srp_jobs'
-
 def retrieve_job_qualifications(URL) :
     '''Function that takes in a webpage and retrieves the html via beautiful soup'''
     webpage = requests.get(URL)
