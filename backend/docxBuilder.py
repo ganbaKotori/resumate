@@ -107,7 +107,8 @@ def buildResume(userInformation):
 
     #added in user skills
     document.add_heading('Skills', level=1)
-    document.add_paragraph(userInformation["skills"])
+    skills = ", ".join(userInformation["skills"])
+    document.add_paragraph(skills)
 
 
     document.add_page_break()
